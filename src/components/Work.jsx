@@ -1,5 +1,5 @@
 import React from "react";
-import WorkItem from "./WorkItem";
+import WorkItem from "./Workitem";
 
 const PortData = {
     jobs: [
