@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Sidenav from './components/Sidenav.jsx';
 import Main from './components/Main.jsx';
 import Projects from './components/Projects.jsx';
+import AboutMe from './components/AboutMe.jsx';
 import Contacts from './components/Contacts.jsx';
 
 
@@ -13,6 +14,7 @@ function App() {
         <Sidenav />
         <Main />
         <Projects /> 
+        <AboutMe />
         <Contacts />
     </div>
   )
