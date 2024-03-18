@@ -13,7 +13,7 @@ const Main = () => {
             
                 <div className='max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center lg:items-start'>
                     <h1 className='font-bold text-gray-800 p-0 sm:text-6xl text-center text-5xl '> I'm Henrique Custodio, </h1>
-                    <h2 children='flex sm:text-3xltext-gray-800'> 
+                    <div children='flex sm:text-3xltext-gray-800'> 
 
                         <TypeAnimation
                             sequence={[
@@ -29,18 +29,18 @@ const Main = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            style={{ fontSize: '2em', display: 'inline-block', paddingLeft: '1rem'}}
+                            style={{ fontSize: '3em', display: 'inline-block', paddingLeft: '1rem'}}
                             repeat={Infinity}
                         />
-                    </h2>
+                    </div>
 
                     <div className='flex justify-start items-center space-x-4 pt-6 pl-8'>
                         <FaGithub className='cursor-pointer' size={30} />
                         <FaLinkedinIn className="cursor-pointer" size={30} />
                     </div> 
 
-                    <div>  
-                        <ResumeButton className="jsx"></ResumeButton>
+                    <div className='flex justify-start items-center space-x-4 pt-3 pl-8'>  
+                        <ResumeButton />
                     </div>
 
                 </div>

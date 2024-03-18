@@ -1,6 +1,29 @@
-import React, { useState } from 'react';
-import { GrDocumentDownload } from "react-icons/gr";
+import React from 'react';
+import { Dropdown, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
 
+const ResumeDropdown = () => {
+  return (
+    <Dropdown>
+      <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic">
+        My Resume
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu style={{ minWidth: '100%' }} size="lg" id="dropdown-basic">
+        <Dropdown.Item href="#/view">View</Dropdown.Item>
+        <Dropdown.Item href="#/download">Download</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+};
+
+export default ResumeDropdown;
+
+
+
+
+
+/* 
 const DownloadResumeButton = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
@@ -33,3 +56,5 @@ const DownloadResumeButton = () => {
 };
 
 export default DownloadResumeButton;
+
+*/
