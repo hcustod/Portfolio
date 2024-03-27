@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is import
 const ResumeDropdown = () => {
   return (
     <Dropdown>
-      <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic">
+      <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic" style={{ backgroundColor: 'white', color: 'black', border: '2px solid black'}}>
         My Resume
       </Dropdown.Toggle>
 

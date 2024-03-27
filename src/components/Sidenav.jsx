@@ -7,7 +7,7 @@ const Sidenav = () => {
     const [nav, setNav] = useState(false);
     const nav_item_size = 40;
     const button_class_name0 = "w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200";
-    const button_class_name1 = "rounded-full shadow-lg bg-gray-100 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale=110 ease-in duration-300";
+    const button_class_name1 = "rounded-full shadow-lg bg-gray-100 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale=110 ease-in duration-300 border-black border-2";
 
     const handleNav = () => {
         setNav(!nav);
