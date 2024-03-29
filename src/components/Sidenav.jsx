@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineHome, AiOutlineMenu, AiOutlineProject } from 'react-icons/ai';
+import { RiMailSendLine } from "react-icons/ri";
+import { VscAccount } from "react-icons/vsc";
 import { GrProjects } from "react-icons/gr";
 
 const Sidenav = () => {
@@ -26,18 +28,18 @@ const Sidenav = () => {
                             <span className="pl-4"> Home </span>
                         </a>
 
-                        <a href="#work" onClick={handleNav} className={button_class_name0}>
-                            <AiOutlineHome size={nav_item_size } />
-                            <span className="pl-4"> Work </span>
-                        </a>
-
                         <a href="#projects" onClick={handleNav} className={button_class_name0}>
                             <AiOutlineHome size={nav_item_size } />
                             <span className="pl-4"> Projects </span>
                         </a>
 
+                        <a href="#aboutMe" onClick={handleNav} className={button_class_name0}>
+                            <VscAccount size={nav_item_size } />
+                            <span className="pl-4"> About Me </span>
+                        </a>
+
                         <a href="#contact" onClick={handleNav} className={button_class_name0}>
-                            <AiOutlineHome size={nav_item_size } />
+                            <RiMailSendLine size={nav_item_size } />
                             <span className="pl-4"> Contact </span>
                         </a>
 
@@ -52,14 +54,14 @@ const Sidenav = () => {
                         <a href="#main" className={button_class_name1}>
                             <AiOutlineHome size={nav_item_size} />
                         </a>
-                        <a href="#work" className={button_class_name1}>
+                        <a href="#projects" className={button_class_name1}>
                             <GrProjects size={nav_item_size} />
                         </a>
-                        <a href="#projects" className={button_class_name1}>
-                            <AiOutlineProject size={nav_item_size} />
+                        <a href="#aboutMe" className={button_class_name1}>
+                            <VscAccount size={nav_item_size} />
                         </a>
                         <a href="#contact" className={button_class_name1}>
-                            <AiOutlineHome size={nav_item_size} />
+                            <RiMailSendLine size={nav_item_size} />
                         </a>
                     </div>
                 </div>

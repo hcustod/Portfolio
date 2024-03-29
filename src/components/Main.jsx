@@ -77,7 +77,7 @@ const Main = () => {
                                 // Same substring at the start will only be typed out once, initially
                                 'I\'m a developer,',
                                 1000, // wait 1s before replacing.
-                                'I\'m a systems administrator,',
+                                'I\'m a systems admin,',
                                 1000,
                                 'I\'m a gamer,',
                                 1000,

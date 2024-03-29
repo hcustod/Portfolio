@@ -3,6 +3,9 @@ import { Dropdown, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
 
 const ResumeDropdown = () => {
+
+  const resumeURL = '/src/assets/pdfs/henrique_custodio_resume.pdf';
+
   return (
     <Dropdown>
       <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic" style={{ backgroundColor: 'white', color: 'black', border: '2px solid black'}}>
@@ -10,8 +13,8 @@ const ResumeDropdown = () => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu style={{ minWidth: '100%' }} size="lg" id="dropdown-basic">
-        <Dropdown.Item href="#/view">View</Dropdown.Item>
-        <Dropdown.Item href="#/download">Download</Dropdown.Item>
+        <Dropdown.Item as="a" href={resumeURL} target='_blank'> View </Dropdown.Item>
+        <Dropdown.Item as="a" href={resumeURL} donwload="Henrique_Custodio_resume.pdf"> Download </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
