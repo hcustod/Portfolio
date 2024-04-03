@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dropdown, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import '/src/index.css';
 
 const ResumeDropdown = () => {
 
@@ -8,7 +9,7 @@ const ResumeDropdown = () => {
 
   return (
     <Dropdown>
-      <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic" style={{ backgroundColor: 'white', color: 'black', border: '2px solid black'}}>
+      <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic" className="hover-for-resume-button" style={{ backgroundColor: 'white', color: 'black', border: '2px solid black'}}>
         My Resume
       </Dropdown.Toggle>
 
@@ -21,8 +22,6 @@ const ResumeDropdown = () => {
 };
 
 export default ResumeDropdown;
-
-
 
 
 
