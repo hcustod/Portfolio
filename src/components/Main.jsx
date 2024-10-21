@@ -14,7 +14,6 @@ import background3 from '../assets/imgs/crane-background-3.jpg';
 import background4 from '../assets/imgs/crane-background-4.jpg';
 import background5 from '../assets/imgs/crane-background-5.jpg';
 
-
 const backgrounds = [
     background0,
     background1,

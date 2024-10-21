@@ -15,7 +15,7 @@ const ResumeDropdown = () => {
 
       <Dropdown.Menu style={{ minWidth: '100%' }} size="lg" id="dropdown-basic">
         <Dropdown.Item as="a" href={resumeURL} target='_blank'> View </Dropdown.Item>
-        <Dropdown.Item as="a" href={resumeURL} donwload="Henrique_Custodio_resume.pdf"> Download </Dropdown.Item>
+        <Dropdown.Item as="a" href={resumeURL} download="Henrique_Custodio_resume.pdf"> Download </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
