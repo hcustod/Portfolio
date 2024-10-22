@@ -71,7 +71,7 @@ const Projects = () => {
 
     return (
         <div id='projects' className="max-w-[1200px] mx-auto p-4 py-16">
-            <h1 className="text-4xl font-bold text-center text-[#001b5e]">
+            <h1 className="text-4xl font-bold text-center mt-4 text-[#001b5e]">
                 Projects
             </h1>
             <p className='text-center py-8'>
