@@ -4,7 +4,7 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import ResumeButton from "./ResumeButton.jsx";
 
 // These should always remain the same - unsure if local env variables therefore necessary. 
-const LinkedIn_link = 'www.linkedin.com/in/henrique-custodio-71954a1a6';
+const LinkedIn_link = 'https://www.linkedin.com/in/henrique-custodio-71954a1a6';
 const Github_link = 'https://github.com/hcustod';
 
 import background0 from '../assets/imgs/crane-background-0.jpg';
