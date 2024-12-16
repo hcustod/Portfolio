@@ -18,7 +18,7 @@ const AboutMe = () => {
             </p>
 
             {/* Skills Section */}
-            <h2 className="text-3xl font-bold text-center text-[#001b5e] mb-8">Top 15 Skills</h2>
+            <h2 className="text-3xl font-bold text-center text-[#001b5e] mb-8">Some of My Skills</h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 text-center">
                 {/* First row */}

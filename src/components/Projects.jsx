@@ -9,31 +9,25 @@ import img5 from '../assets/imgs/proj5.jpg';
 
 
 const projectCategories = {
-    school: [
+    webApplications: [
         { title: "school project 1", img: img1, link: "/school-project-1" },
         { title: "school project 2", img: img1, link: "/school-project-2" },
         { title: "school project 3", img: img1, link: "/school-project-3" },
         { title: "school project 4", img: img1, link: "/school-project-4" },
     ],
-    games: [
+    systemTools: [
         { title: "school project 1", img: img1, link: "/school-project-1" },
         { title: "school project 2", img: img1, link: "/school-project-2" },
         { title: "school project 3", img: img1, link: "/school-project-3" },
         { title: "school project 4", img: img1, link: "/school-project-4" },
     ],
-    websites: [
+    gameDevelopment: [
         { title: "school project 1", img: img1, link: "/school-project-1" },
         { title: "school project 2", img: img1, link: "/school-project-2" },
         { title: "school project 3", img: img1, link: "/school-project-3" },
         { title: "school project 4", img: img1, link: "/school-project-4" },
     ],
-    webApps: [
-        { title: "school project 1", img: img1, link: "/school-project-1" },
-        { title: "school project 2", img: img1, link: "/school-project-2" },
-        { title: "school project 3", img: img1, link: "/school-project-3" },
-        { title: "school project 4", img: img1, link: "/school-project-4" },
-    ],
-    Apps: [
+    dataAnalytics: [
         { title: "school project 1", img: img1, link: "/school-project-1" },
         { title: "school project 2", img: img1, link: "/school-project-2" },
         { title: "school project 3", img: img1, link: "/school-project-3" },
@@ -101,10 +95,13 @@ const Projects = () => {
 
                         return projectChunks.map((chunk, chunkIndex) => (
                             <div key={`${index}-${chunkIndex}`}>
+
+                                {/* Category names taken from const arrays and formatted. */}
                                 <h2 className="text-3xl font-bold text-center text-[#001b5e mb-10">
-                                    {category.charAt(0).toUpperCase() + category.slice(1)} Projects
+                                    {category.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase())} Projects
                                 </h2>
 
+                                {/* Map project items to display Grid. */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 w-full">
                                     {chunk.map((project, idx) => (
                                         <ProjectItem key={idx} img={project.img} title={project.title} link={project.link} />
