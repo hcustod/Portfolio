@@ -1,40 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectItem from "./ProjectItem";
-import { Carousel  } from "react-responsive-carousel";
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import img1 from '../assets/imgs/proj1.jpg';
-import img2 from '../assets/imgs/proj2.jpg';
-import img3 from '../assets/imgs/proj3.jpg';
-import img5 from '../assets/imgs/proj5.jpg';
+import img1 from "../assets/imgs/proj1.jpg";
+import img2 from "../assets/imgs/proj2.jpg";
+import img3 from "../assets/imgs/proj3.jpg";
+import img4 from "../assets/imgs/proj4.jpg";
+
+const projects = [
+  { title: "Portfolio Website", category: "Web Development", img: img1, link: "/portfolio-website" },
+  { title: "Task Management App", category: "Web Applications", img: img2, link: "/task-manager" },
+  { title: "Invoice Parser", category: "System Tools", img: img3, link: "/invoice-parser" },
+  { title: "NES Mario Clone", category: "Game Development", img: img4, link: "/nes-mario" },
+  { title: "E-Commerce Site", category: "Web Development", img: img1, link: "/ecommerce-site" },
+  { title: "Beer Rating App", category: "Web Applications", img: img2, link: "/beer-rating" },
+];
+
+const Projects = () => {
+  const [searchTerm, setSearchTerm] = useState(""); // Search term state
+  const [selectedCategory, setSelectedCategory] = useState("All"); // Category filter state
+
+  const categories = ["All", "Web Development", "Web Applications", "System Tools", "Game Development"];
+
+  // Filter projects by category and search term
+  const filteredProjects = projects.filter((project) =>
+    (selectedCategory === "All" || project.category === selectedCategory) &&
+    project.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div id="projects" className="max-w-[1200px] mx-auto p-4 py-16">
+      {/* Title */}
+        <h1 className="text-6xl font-bold text-center text-[#001b5e] mb-8 mt-8">Projects</h1>
+
+        <p className="text-center mb-8"> 
+            Below are some of my projects 
+            which highlight my work and expertise across a variety of modern programming technologies. 
+            Projects can be searched for by name and filtered by their category, with each card including links to its codebase 
+            and live application where available. For more of my work, please explore my GitHub.
+        </p>
+
+      {/* Search Bar */}
+        <div className="flex justify-center mb-6">
+            <input
+            type="text"
+            placeholder="Search projects..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="border rounded-md px-4 py-2 w-full max-w-[400px] shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+        </div>
+
+      
+      {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-8">
+        {categories.map((category) => (
+            <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-4 py-2 border rounded ${
+                selectedCategory === category ? "bg-blue-500 text-white" : "bg-gray-200"
+            } transition-all duration-300 hover:bg-blue-300`}
+            >
+            {category}
+            </button>
+        ))}
+        </div>
 
 
-const projectCategories = {
-    webApplications: [
-        { title: "school project 1", img: img1, link: "/school-project-1" },
-        { title: "school project 2", img: img1, link: "/school-project-2" },
-        { title: "school project 3", img: img1, link: "/school-project-3" },
-        { title: "school project 4", img: img1, link: "/school-project-4" },
-    ],
-    systemTools: [
-        { title: "school project 1", img: img1, link: "/school-project-1" },
-        { title: "school project 2", img: img1, link: "/school-project-2" },
-        { title: "school project 3", img: img1, link: "/school-project-3" },
-        { title: "school project 4", img: img1, link: "/school-project-4" },
-    ],
-    gameDevelopment: [
-        { title: "school project 1", img: img1, link: "/school-project-1" },
-        { title: "school project 2", img: img1, link: "/school-project-2" },
-        { title: "school project 3", img: img1, link: "/school-project-3" },
-        { title: "school project 4", img: img1, link: "/school-project-4" },
-    ],
-    dataAnalytics: [
-        { title: "school project 1", img: img1, link: "/school-project-1" },
-        { title: "school project 2", img: img1, link: "/school-project-2" },
-        { title: "school project 3", img: img1, link: "/school-project-3" },
-        { title: "school project 4", img: img1, link: "/school-project-4" },
-    ]
-}
+      {/* Projects Display */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+                <ProjectItem key={index} img={project.img} title={project.title} link={project.link} />
+            ))
+            ) : (
+            <p className="col-span-3 text-center text-gray-500">No projects found.</p>
+            )}
+        </div>
+    </div>
+  );
+};
 
+export default Projects;
+
+/*
 // The two arrows are components; thus must be capitalized. 
 const LeftArrow = ({ onClick }) => (
     <button 
@@ -60,76 +108,6 @@ const chunckProjects = (project, size) => {
     return chunks;
 }
 
-const Projects = () => {
-    const categories = Object.keys(projectCategories);  // Array of category keys (above).
+*/
 
-    return (
-        <div id='projects' className="max-w-[1200px] mx-auto p-4 py-16">
-            <h1 className="text-4xl font-bold text-center mt-4 text-[#001b5e]">
-                Projects
-            </h1>
-            <p className='text-center py-8'>
-                Do magna tempor ea sint eiusmod voluptate laboris fugiat id consequat. 
-                Sit pariatur irure aliquip est. Tempor commodo ex adipisicing ea voluptate velit exercitation tempor.
-                Exercitation commodo non dolor minim. Dolore ad sint reprehenderit tempor ipsum labore exercitation exercitation. 
-                Excepteur aute commodo qui amet exercitation elit non. Ut sunt sunt ex pariatur quis ipsum occaecat.
-            </p>
-            <div className="bg-gray-100 p-8 rounded-lg w-full"> 
-                <Carousel
-                    showThumbs={false}
-                    showStatus={false}
-                    infiniteLoop={true}
-                    autoPlay={false}
-                    interval={6000}
-                    showIndicators={true}
-                    swipable={true}
-                    renderArrowPrev={(onClickHandler, hasPrev) => 
-                        hasPrev && <LeftArrow onClick={onClickHandler} />
-                    }
-                    renderArrowNext={(onClickHandler, hasNext) => 
-                        hasNext && <RightArrow onClick={onClickHandler} />
-                    }
-                >
-                    {categories.map((category, index) => {
-                        const projectChunks = chunckProjects(projectCategories[category], 4);
 
-                        return projectChunks.map((chunk, chunkIndex) => (
-                            <div key={`${index}-${chunkIndex}`}>
-
-                                {/* Category names taken from const arrays and formatted. */}
-                                <h2 className="text-3xl font-bold text-center text-[#001b5e mb-10">
-                                    {category.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase())} Projects
-                                </h2>
-
-                                {/* Map project items to display Grid. */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 w-full">
-                                    {chunk.map((project, idx) => (
-                                        <ProjectItem key={idx} img={project.img} title={project.title} link={project.link} />
-                                    ))}
-                                </div>
-                            </div>
-                        ))
-                    })}
-                </Carousel>
-            </div>
-            <style jsx>{`
-            .carousel .control-dots {
-                position: absolute;
-                bottom: -12px;
-            }
-
-            .carousel .control-dots .dot {
-                background-color: #a0aec0;
-            }
-
-            .carousel .control-dots .dot.selected {
-                background-color: #001b5e;
-            }
-
-        `}</style>
-        </div>
-
-    )
-}
-
-export default Projects;

@@ -82,7 +82,7 @@ const Main = () => {
                                 1000, // wait 1s before replacing.
                                 'I\'m a systems admin,',
                                 1000,
-                                'I\'m a gamer,',
+                                'I\'m a cloud engineer,',
                                 1000,
                                 'I\'m a big fan of cranes,',
                                 1000,
