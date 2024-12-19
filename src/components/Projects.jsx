@@ -1,17 +1,60 @@
 import React, { useState } from "react";
 import ProjectItem from "./ProjectItem";
+import { FaReact, FaJsSquare, FaDatabase } from "react-icons/fa";
 import img1 from "../assets/imgs/proj1.jpg";
 import img2 from "../assets/imgs/proj2.jpg";
 import img3 from "../assets/imgs/proj3.jpg";
 import img4 from "../assets/imgs/proj4.jpg";
 
 const projects = [
-  { title: "Portfolio Website", category: "Web Development", img: img1, link: "/portfolio-website" },
-  { title: "Task Management App", category: "Web Applications", img: img2, link: "/task-manager" },
-  { title: "Invoice Parser", category: "System Tools", img: img3, link: "/invoice-parser" },
-  { title: "NES Mario Clone", category: "Game Development", img: img4, link: "/nes-mario" },
-  { title: "E-Commerce Site", category: "Web Development", img: img1, link: "/ecommerce-site" },
-  { title: "Beer Rating App", category: "Web Applications", img: img2, link: "/beer-rating" },
+  { 
+    title: "Portfolio Website",
+    category: "Web Application", 
+    img: img1, 
+    githubLink: "/portfolio-website",
+    liveLink: "",
+    skills: [FaReact, FaJsSquare, FaDatabase]
+  },
+  { 
+    title: "Task Management App",
+    category: "Web Application", 
+    img: img1, 
+    githubLink: "/portfolio-website",
+    liveLink: "",
+    skills: [FaReact, FaJsSquare, FaDatabase]
+  },
+  { 
+    title: "Invoice Parser",
+    category: "System Tools", 
+    img: img1, 
+    githubLink: "/portfolio-website",
+    liveLink: "",
+    skills: [FaReact, FaJsSquare, FaDatabase]
+  },
+  { 
+    title: "E-Commerce Site",
+    category: "Web Applications", 
+    img: img1, 
+    githubLink: "/portfolio-website",
+    liveLink: "",
+    skills: [FaReact, FaJsSquare, FaDatabase]
+  },
+  { 
+    title: "Beer Rating App",
+    category: "Web Application", 
+    img: img1, 
+    githubLink: "/portfolio-website",
+    liveLink: "",
+    skills: [FaReact, FaJsSquare, FaDatabase]
+  },
+  { 
+    title: "NES Mario Clone",
+    category: "Game Development", 
+    img: img1, 
+    githubLink: "/portfolio-website",
+    liveLink: "",
+    skills: [FaReact, FaJsSquare, FaDatabase]
+  },
 ];
 
 const Projects = () => {
@@ -70,7 +113,13 @@ const Projects = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.length > 0 ? (
             filteredProjects.map((project, index) => (
-                <ProjectItem key={index} img={project.img} title={project.title} link={project.link} />
+                <ProjectItem 
+                  key={index} 
+                  img={project.img} 
+                  title={project.title} 
+                  githubLink={project.githubLink}
+                  liveLink={project.liveLink}
+                  skills={project.skills} />
             ))
             ) : (
             <p className="col-span-3 text-center text-gray-500">No projects found.</p>
