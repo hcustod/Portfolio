@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        arsenal: ['Ubuntu', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'sans-serif'], // Define the font family as "ubuntu"
       },
     },
   },

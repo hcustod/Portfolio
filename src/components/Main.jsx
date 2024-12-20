@@ -98,11 +98,11 @@ const Main = () => {
 
                     <div className='flex justify-start items-center space-x-4 pt-6 pl-8'>
 
-                        <div className='bg-opacity-60 border-2 border-black p-2 rounded-full bg-sky-50 cursor-pointer shadow-md hover:bg-sky-200 transition-all duration-300'>
+                        <div className='bg-opacity-80 border-2 text-blue-600 shadow-md shadow-slate-400 border-black p-3 rounded-full bg-sky-50 cursor-pointer hover:bg-sky-200 hover:text-white ease-in duration-300'>
                             <FaGithub className='cursor-pointer' size={30} />
                         </div>
 
-                        <div className='bg-opacity-60 border-2 border-black p-2 rounded-full bg-sky-50 cursor-pointer shadow-md hover:bg-sky-200 transition-all duration-300'>
+                        <div className='bg-opacity-80 text-blue-600 shadow-md shadow-slate-400 border-2 border-black p-3 rounded-full bg-sky-50 cursor-pointer hover:bg-sky-200  hover:text-white ease-in duration-300'>
                             <FaLinkedinIn className="cursor-pointer" size={30} />
                         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Button } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
 import '/src/index.css';
 
@@ -9,7 +9,7 @@ const ResumeDropdown = () => {
 
   return (
     <Dropdown>
-      <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic" className="bg-opacity-70 shadow-inner hover-for-resume-button bg-sky-50 text-blue-600 border-2 border-black py-2 rounded hover:bg-sky-300 hover:text-white">
+      <Dropdown.Toggle as="button" size="lg" id="dropdown-basic" className="shadow-md shadow-slate-400 ease-in duration-300 bg-opacity-80 px-4 p-3 border-black border-2 font-bold text-xl text-blue-600 bg-sky-50 hover:bg-sky-200  hover:text-white rounded-lg focus:outline-none">
         My Resume
       </Dropdown.Toggle>
 

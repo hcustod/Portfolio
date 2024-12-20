@@ -10,13 +10,13 @@ const Sidenav = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const nav_item_size = 40;
 
-    const button_class_mobile_base = "bg-opacity-50 shadow-inner w-[75%] flex justify-center items-center rounded-full bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer ease-in duration-200";
-    const button_class_desktop_base = "bg-opacity-50 rounded-full shadow-inner bg-gray-100 shadow-gray-500 m-2 p-4 cursor-pointer hover:scale=110 ease-in duration-300 border-black border-2";
+    const button_class_mobile_base = "bg-opacity-80 text-blue-600 shadow-md w-[75%] flex justify-center items-center rounded-full bg-gray-100 shadow-slate-500 m-2 p-4 cursor-pointer ease-in duration-200";
+    const button_class_desktop_base = "bg-opacity-80 text-blue-600 rounded-full shadow-md bg-gray-100 shadow-slate-400 m-2 p-4 cursor-pointer hover:scale=110 ease-in duration-300 border-black border-2";
 
     // Original class names for the desktop version, with dynamic color changes
-    const button_class_desktop_default = `${button_class_desktop_base} bg-opacity-50 shadow-inner bg-sky-50 text-blue-600 shadow-gray-500 hover:bg-sky-300 hover:text-white`; // default
-    const button_class_desktop_transitionGrey = `${button_class_desktop_base} bg-opacity-50 bg-sky-100 text-blue-600 bg-gray-200 shadow-gray-700 hover:bg-sky-300 hover:text-white`;
-    const button_class_desktop_darkerGrey = `${button_class_desktop_base} bg-opacity-50 bg-sky-100 text-blue-600 bg-gray-300 shadow-gray-800 hover:bg-sky-300 hover:text-white`; // off-grey for white background
+    const button_class_desktop_default = `${button_class_desktop_base} bg-opacity-80 shadow-md bg-sky-50 text-blue-600 shadow-slate-400 hover:bg-sky-200 hover:text-white`; // default
+    const button_class_desktop_transitionGrey = `${button_class_desktop_base} bg-opacity-80 shadow-md bg-sky-100 text-blue-600 bg-gray-200 shadow-slate-400 hover:bg-sky-200 hover:text-white`;
+    const button_class_desktop_darkerGrey = `${button_class_desktop_base} bg-opacity-80 bg-sky-100 shadow-md text-blue-600 bg-gray-300 shadow-slate-400 hover:bg-sky-200 hover:text-white`; // off-grey for white background
   
     const handleNav = () => setNav(!nav);
 

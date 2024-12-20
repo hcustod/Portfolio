@@ -78,7 +78,7 @@ const Projects = () => {
             Below are some of my projects 
             which highlight my work and expertise across a variety of modern programming technologies. 
             Projects can be searched for by name and filtered by their category, with each card including links to its codebase 
-            and live application where available. For more of my work, please explore my GitHub.
+            and live application where available. For more of my work, please explore my <a href="https://github.com/hcustod" className="text-blue-600">GitHub</a>.
         </p>
     
     <div className="border-2 border-gray-200 p-4 rounded-lg shadow-inner bg-slate-50">
@@ -86,10 +86,10 @@ const Projects = () => {
       <div className="flex justify-center mb-6">
             <input
             type="text"
-            placeholder="Search projects..."
+            placeholder="Search projects here..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="border rounded-md px-4 py-2 w-full max-w-[400px] shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-300"
+            className="placeholder-blue-200 border rounded-md px-4 py-2 w-full max-w-[400px] shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-300"
             />
         </div>
 
@@ -101,8 +101,8 @@ const Projects = () => {
             key={category}
             onClick={() => setSelectedCategory(category)}
             className={`px-4 py-2 border rounded ${
-                selectedCategory === category ? "bg-sky-200 text-white" : "bg-sky-50 text-blue-600"
-            } transition-all duration-300 hover:bg-sky-200 hover:text-white`}
+                selectedCategory === category ? "bg-sky-200 text-white font-bold" : "bg-sky-50 text-blue-600 font-bold"
+            } ease-in duration-300 hover:bg-sky-200 hover:text-white shadow-md shadow-slate-400 bg-opacity-80`}
             >
             {category}
             </button>

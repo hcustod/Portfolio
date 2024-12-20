@@ -15,7 +15,6 @@ const AboutMe = () => {
             to modern enterprise development and infrastructure environments. 
             </p>
 
-            <div className='border-2 border-gray-200 p-4 rounded-lg shadow-inner bg-slate-50'>
             {/* Skills Section */}
             <h2 className="text-3xl font-bold text-center text-[#001b5e] mb-8">Some of My Skills</h2>
 
@@ -85,8 +84,6 @@ const AboutMe = () => {
                     <SiJira size={40} className="mx-auto text-[#0052cc]" />
                     <p className="mt-2">Jira</p>
                 </div>
-            </div>
-
             </div>
         </div>
     );
