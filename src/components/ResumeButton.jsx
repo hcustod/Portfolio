@@ -9,7 +9,7 @@ const ResumeDropdown = () => {
 
   return (
     <Dropdown>
-      <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic" className="hover-for-resume-button" style={{ backgroundColor: 'white', color: 'black', border: '2px solid black'}}>
+      <Dropdown.Toggle as={Button} variant="primary" size="lg" id="dropdown-basic" className="bg-opacity-70 shadow-inner hover-for-resume-button bg-sky-50 text-blue-600 border-2 border-black py-2 rounded hover:bg-sky-300 hover:text-white">
         My Resume
       </Dropdown.Toggle>
 

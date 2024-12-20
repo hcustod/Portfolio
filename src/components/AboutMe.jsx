@@ -4,19 +4,18 @@ import { SiPostgresql, SiPhp, SiTerraform, SiVagrant, SiJest, SiEslint, SiJira }
 
 const AboutMe = () => {
     return (
-        <div id='aboutMe' className='max-w-[1040px] m-auto mt-16 em-10'>
+        <div id='aboutMe' className='max-w-[1200px] m-auto mt-16 em-10'>
             {/* About Me Section */}
             <h1 className="text-4xl font-bold text-center mt-8 text-[#001b5e]"> About Me </h1>
 
             <p className='text-center py-8'>
-                As an IT professional with a versatile background, including roles as a Developer Analyst and Systems Technical Specialist, 
-                my journey into technology was shaped by a lifelong immersion in the digital world, 
-                significantly influenced by my brother, a masterful Systems Architect and Linux aficionado. 
-                This familial inspiration fueled my passion and aspiration to excel in the tech industry, 
-                constantly pushing me to explore new horizons. With a skill set that spans web development, 
-                IT infrastructure, and cloud services, I am committed to continuous growth and innovation in this dynamic field.
+            I am an IT professional with experience as a Developer Analyst and Systems Technical Specialist. 
+            My background includes Web Development, Cloud Engineering, as well as Systems and Database Administration. 
+            I bring my passion for problem solving and learning of new technologies to contribute effectively 
+            to modern enterprise development and infrastructure environments. 
             </p>
 
+            <div className='border-2 border-gray-200 p-4 rounded-lg shadow-inner bg-slate-50'>
             {/* Skills Section */}
             <h2 className="text-3xl font-bold text-center text-[#001b5e] mb-8">Some of My Skills</h2>
 
@@ -86,6 +85,8 @@ const AboutMe = () => {
                     <SiJira size={40} className="mx-auto text-[#0052cc]" />
                     <p className="mt-2">Jira</p>
                 </div>
+            </div>
+
             </div>
         </div>
     );

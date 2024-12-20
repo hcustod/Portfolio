@@ -97,8 +97,15 @@ const Main = () => {
                     </div>
 
                     <div className='flex justify-start items-center space-x-4 pt-6 pl-8'>
-                        <FaGithub className='cursor-pointer' size={30} />
-                        <FaLinkedinIn className="cursor-pointer" size={30} />
+
+                        <div className='bg-opacity-60 border-2 border-black p-2 rounded-full bg-sky-50 cursor-pointer shadow-md hover:bg-sky-200 transition-all duration-300'>
+                            <FaGithub className='cursor-pointer' size={30} />
+                        </div>
+
+                        <div className='bg-opacity-60 border-2 border-black p-2 rounded-full bg-sky-50 cursor-pointer shadow-md hover:bg-sky-200 transition-all duration-300'>
+                            <FaLinkedinIn className="cursor-pointer" size={30} />
+                        </div>
+
                     </div> 
 
                     <div className='flex justify-start items-center space-x-4 pt-3 pl-8'>  

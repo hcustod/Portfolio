@@ -70,25 +70,26 @@ const Projects = () => {
   );
 
   return (
-    <div id="projects" className="max-w-[1200px] mx-auto p-4 py-16">
+    <div id="projects" className="max-w-[1400px] mx-auto p-4 py-16">
       {/* Title */}
         <h1 className="text-6xl font-bold text-center text-[#001b5e] mb-8 mt-8">Projects</h1>
 
-        <p className="text-center mb-8"> 
+        <p className="text-center max-w-[1200px] mx-auto mb-8 "> 
             Below are some of my projects 
             which highlight my work and expertise across a variety of modern programming technologies. 
             Projects can be searched for by name and filtered by their category, with each card including links to its codebase 
             and live application where available. For more of my work, please explore my GitHub.
         </p>
-
+    
+    <div className="border-2 border-gray-200 p-4 rounded-lg shadow-inner bg-slate-50">
       {/* Search Bar */}
-        <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-6">
             <input
             type="text"
             placeholder="Search projects..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="border rounded-md px-4 py-2 w-full max-w-[400px] shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="border rounded-md px-4 py-2 w-full max-w-[400px] shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-300"
             />
         </div>
 
@@ -100,8 +101,8 @@ const Projects = () => {
             key={category}
             onClick={() => setSelectedCategory(category)}
             className={`px-4 py-2 border rounded ${
-                selectedCategory === category ? "bg-blue-500 text-white" : "bg-gray-200"
-            } transition-all duration-300 hover:bg-blue-300`}
+                selectedCategory === category ? "bg-sky-200 text-white" : "bg-sky-50 text-blue-600"
+            } transition-all duration-300 hover:bg-sky-200 hover:text-white`}
             >
             {category}
             </button>
@@ -125,6 +126,9 @@ const Projects = () => {
             <p className="col-span-3 text-center text-gray-500">No projects found.</p>
             )}
         </div>
+
+    </div>
+
     </div>
   );
 };
