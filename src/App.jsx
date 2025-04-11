@@ -5,6 +5,8 @@ import Projects from './components/Projects.jsx';
 import AboutMe from './components/AboutMe.jsx';
 import Contacts from './components/Contacts.jsx';
 
+// TODO; 
+
 
 
 function App() {
